@@ -2,8 +2,6 @@
 // hw04
 // Decimal to Hexadecimal Converter 
 // 2/23/16
-// 
-
 
 
 import java.util.Scanner;

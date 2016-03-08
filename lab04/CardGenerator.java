@@ -7,18 +7,22 @@
 //27-39 are hearts
 //40-52 are spades
 
-public class Card Generator { // start of class
+public class CardGenerator { // start of class
 public static void main (String [ ] args) { // start of main method
     
-    int card = (int) (Math.random()*(upperBound+1)) + baseNUm; // user can generate a random number 
-    int card = (int)(Math.random()*52) + 1 ; // random number between 2 and 52 because we are not including the 1
-    String suit = ""; // suit string 
-    String rank = ""; // rank string
-    switch(card % 13) {  // switch method for choosing a card within a range of cards
+    int upperBound = 52;  // defining upper bound as the entire deck of 52 cards 
+    int baseNum = 1; // the random numbers can be chosen from the base number which is 1
+    int randomRank = (int)(Math.random()*13) + 1; // choosing a random rank for the card and the ranks range from 1-13
+    int randomSuit = (int)(Math.random()*4) + 1; // choosing a random suit for the card and the suits range from numbers 1-4
+
+    
+    String suit = " " ; // suit string 
+    String rank = " "; // rank string
+    switch(randomRank % 13) {  // start of switch method for choosing a card within a range of cards
         case 1: 
-            rank = "1"; // the rank of the card
-            break;
-            case 2:
+        rank = "Ace"; // the rank of the card
+            break; 
+            case 2: // case for the switch statement 
             rank = "2";
              break;
             case 3:
@@ -57,7 +61,24 @@ public static void main (String [ ] args) { // start of main method
                                                             
                                                             
     } // closing switch statement
-    suits = (("Hearts") ("Diamonds") ("Spades") ("Clubs"));
+   
+   switch (randomSuit % 4) { // switch for the random suit and module
+   case 1: 
+       suit = "Clubs"; // suit of clubs
+       break;
+       case 2: 
+           suit = "Spades"; // suit of spades
+           break;
+           case 3: 
+               suit = "Hearts"; // suit of hearts
+               break;
+               case 4: 
+                   suit = "Diamonds"; // suit of diamonds
+                   break;
+   
+   }// closing switch statement for randomSuit
+    
+    System.out.println("You picked the " + (rank) + "of" + (suit) );
     
     
             
