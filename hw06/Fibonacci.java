@@ -20,8 +20,17 @@ public class Fibonacci{ // start of class
         num2 = myScanner.nextInt();
         sequenceNum = myScanner.nextInt();
         } // end of while loop
-        int fibNum = ((((sequenceNum) - (num1)) + ((sequenceNum) - (num2))));
-        System.out.println("The numbers are: " + fibNum); // final print out of fibonacci sequence
+       
+        System.out.print("The numbers are: "); // printing out the fibonacci numbers
+        System.out.print(num1 + " , "); // first number is the first integer
+        System.out.print(num2); // second number is the second integer
+        while (sequenceNum > 2){ // beginning of while loop for printing the fibonacci number
+        sequenceNum = (num1 + num2); // third number in the sequence is equal to the first two numbers added together
+        System.out.print(" , " + sequenceNum); // printing out the fibonacci sequence
+        num1 = num2 ;
+        num2 = sequenceNum; 
+       
+        } // end of while loop
     } // end of main method
 } //end of class
         
