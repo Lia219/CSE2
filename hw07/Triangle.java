@@ -63,7 +63,7 @@ i++;
             }
              System.out.println("DO WHILE LOOP:");
              Count = 1;
-            do {   // set up a loop to run the number of times as the iputeed value
+            do {   // set up a loop to run the number of times as the input value
                 if(Count%2==0){ // test if the current cycle is printing an even or an odd number
                     int Repeat = 1;
                    do { //set up a loop to break the line every time it is run
